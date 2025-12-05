@@ -1,0 +1,4 @@
+pkg_name: apache2
+ports_dest_path: /etc/apache2/ports.conf
+default_dest_path: /etc/apache2/sites-enabled/000-default.conf
+html_dest_path: /var/www/html/

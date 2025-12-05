@@ -1,0 +1,29 @@
+# /etc/apache2/sites-available/000-default.conf (Ubuntu/Debian Example)
+
+<VirtualHost *:{{http_port}}>
+    # The ServerName directive sets the Request Header for the server.
+    # It is used to send a request to the correct VirtualHost.
+    # If you don't set this, Apache might use the first one it finds.
+    ServerAdmin webmaster@localhost
+    DocumentRoot {{html_dest_path}}
+
+    # Available loglevels: trace8, ..., trace1, debug, info, notice, warn, error, crit, alert, emerg.
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+
+# If you have SSL (HTTPS) enabled, you might also see a default-ssl.conf
+# or have an SSL VirtualHost defined here or in another file.
+# Example SSL Block (often in 000-default-ssl.conf or included):
+# <IfModule mod_ssl.c>
+# <VirtualHost *:443>
+#     ServerAdmin webmaster@localhost
+#     DocumentRoot /var/www/html
+#     SSLEngine on
+#     SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem
+#     SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+#     ErrorLog ${APACHE_LOG_DIR}/error.log
+#     CustomLog ${APACHE_LOG_DIR}/access.log combined
+# </VirtualHost>
+# </IfModule>

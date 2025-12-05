@@ -1,0 +1,2 @@
+- name: Restart apache2 service
+  service: name={{pkg_name}} state=restarted
